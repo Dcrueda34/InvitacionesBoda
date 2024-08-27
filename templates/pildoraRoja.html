@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Matrix</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}">
+</head>
+<body>
+    <div class="matrix-container">
+        <!-- Canvas para el efecto Matrix -->
+        
+        <!-- Formulario de confirmación -->
+        <div class="form-container">
+            <!-- Incrustar el formulario de Google Forms aquí -->
+            <iframe src="https://forms.gle/QcFc8Q6VGTKnQaVp8" 
+                    width="640" 
+                    height="480" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">Cargando…</iframe>
+        </div>
+
+        <div class="pill-container">
+            <button id="devolver" class="devolver" onclick="devolver()">Devolverme</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

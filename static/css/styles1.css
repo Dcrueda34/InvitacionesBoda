@@ -1,0 +1,79 @@
+body {
+    background-image: url('/static/images/fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Para evitar el desplazamiento si el texto es largo */
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.typing-text {
+    white-space: pre-wrap; /* Mantiene los saltos de línea y espacios en el texto */
+    overflow-wrap: break-word; /* Rompe el texto largo para que no desborde el contenedor */
+    font-size: 2rem; /* Tamaño de la fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    line-height: 0.8    ; /* Espacio entre líneas */
+    max-width: 95%; /* Ajusta el ancho máximo del contenedor de texto */
+    color: white; /* Color del texto */
+    margin: 0 auto; /* Centra el contenedor de texto horizontalmente */
+    padding: 20px; /* Añade relleno alrededor del texto */
+    position: relative; /* Necesario para posicionar el cursor */
+    display: inline; /* Asegura que el contenedor de texto ajuste su tamaño al contenido */
+}
+
+.typing-text::after {
+    content: '|'; /* Cursor de máquina de escribir */
+    position: relative; /* Posiciona el cursor en relación al contenedor */
+    right: 0; /* Alinea el cursor a la derecha del contenedor */
+    bottom: 0; /* Alinea el cursor en la parte inferior del contenedor */
+    color: #FFFFFF; /* Color del cursor */
+    height: 1em; /* Ajusta la altura del cursor al tamaño de la fuente */
+    animation: typing 20s steps(40, end), blink-caret 0.60s step-end infinite; /* Animación de parpadeo del cursor */
+    vertical-align: bottom; /* Alinea el cursor con la base del texto */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { color: transparent; }
+    50% { color: #eceeed; }
+}
+
+
+.pill-container {
+    margin-top: 20px; /* Espacio arriba del botón */
+}
+
+.devolver {
+    background-color: #02151f; /* Color azul */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Alinea el texto en el centro */
+    line-height: 1.5; /* Espaciado del texto */ 
+    padding: 10px 20px; /* Relleno interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.devolver:hover {
+    background-color: #055a87; /* Color azul oscuro al pasar el mouse */
+}
+
