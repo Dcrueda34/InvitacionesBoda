@@ -14,7 +14,7 @@ flask-talisman==1.1.0
 Flask-WTF==1.2.1
 frozenlist==1.4.1
 google-api-core==2.19.2
-google-api-python-client==1.12.8
+google-api-python-client==2.142.0
 google-auth==2.34.0
 google-auth-httplib2==0.2.0
 google-cloud-core==2.4.1
