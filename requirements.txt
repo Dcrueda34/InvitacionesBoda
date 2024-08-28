@@ -17,6 +17,7 @@ google-api-core==2.19.2
 google-api-python-client==2.142.0
 google-auth==2.34.0
 google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.1
 google-cloud-core==2.4.1
 google-cloud-storage==2.18.2
 google-crc32c==1.5.0
@@ -33,6 +34,7 @@ MarkupSafe==2.1.5
 multidict==6.0.5
 nodeenv==1.9.1
 numpy==1.26.4
+oauthlib==3.2.2
 packaging==23.2
 pluggy==1.4.0
 proto-plus==1.24.0
@@ -47,6 +49,7 @@ pyright==1.1.377
 pytest==8.0.2
 python-dotenv==1.0.1
 requests==2.32.3
+requests-oauthlib==2.0.0
 rsa==4.9
 six==1.16.0
 SQLAlchemy==2.0.31
