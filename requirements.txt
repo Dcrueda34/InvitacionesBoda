@@ -46,14 +46,12 @@ PyJWT==2.8.0
 pylance==0.16.1
 pyparsing==3.1.4
 pyright==1.1.377
-pytest==8.0.2
 python-dotenv==1.0.1
 requests==2.32.3
 requests-oauthlib==2.0.0
 rsa==4.9
 six==1.16.0
 SQLAlchemy==2.0.31
-twilio==9.2.3
 typing_extensions==4.12.2
 uritemplate==3.0.1
 urllib3==2.2.2
