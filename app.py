@@ -1,6 +1,5 @@
 import os
 from flask import Flask, render_template, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.discovery import build
