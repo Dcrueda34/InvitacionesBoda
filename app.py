@@ -8,24 +8,6 @@ from googleapiclient.discovery import build
 
 app = Flask(__name__)
 
-# Configuración de la base de datos
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///confirmations.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'supersecretkey'
-db = SQLAlchemy(app)
-
-# Modelo para la base de datos
-class Confirmation(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    phone_number = db.Column(db.String(20), unique=True, nullable=False)
-    name = db.Column(db.String(100), nullable=False)
-    adults = db.Column(db.Integer, nullable=False)
-    children = db.Column(db.Integer, nullable=False)
-    choice = db.Column(db.String(10), nullable=False)
-
-# Crea la base de datos si no existe
-with app.app_context():
-    db.create_all()
 
 # Configuración de Google Sheets
 SERVICE_ACCOUNT_FILE = os.path.expanduser("C:/Users/hp/OneDrive/Escritorio/service-account-file.json")
