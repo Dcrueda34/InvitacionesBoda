@@ -1,9 +1,9 @@
-node_modules/
+
 tests/
 *.md
 *.log
 .git/
 env/
 myenv/
-
+__pycache__/
 
