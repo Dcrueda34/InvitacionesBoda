@@ -10,7 +10,7 @@ click==8.1.7
 colorama==0.4.6
 Flask==3.0.3
 Flask-SQLAlchemy==3.1.1
-Flask-talisman==1.1.0
+flask-talisman==1.1.0
 Flask-WTF==1.2.1
 frozenlist==1.4.1
 google-api-core==2.19.2
@@ -33,7 +33,6 @@ Jinja2==3.1.4
 MarkupSafe==2.1.5
 multidict==6.0.5
 nodeenv==1.9.1
-numpy==1.26.4
 oauthlib==3.2.2
 packaging==23.2
 pluggy==1.4.0
