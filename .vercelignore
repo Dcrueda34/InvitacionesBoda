@@ -1,22 +1,5 @@
-# Ignorar la carpeta node_modules, si por alguna razón estuviera presente
-node_modules
-
-# Ignorar archivos de configuración locales
-.env
-.env.local
-.vscode
-.git
-
-# Ignorar archivos de documentación
-README.md
-docs/
-
-# Ignorar archivos de pruebas
+node_modules/
 tests/
-__tests__/
-*.spec.js
-*.test.js
+*.md
+*.log
 
-# Ignorar archivos de configuración de desarrollo
-webpack.config.js
-jest.config.js
