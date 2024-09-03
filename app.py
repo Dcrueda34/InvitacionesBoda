@@ -1,8 +1,8 @@
+import os
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
-import os
 from googleapiclient.discovery import build
 
 
@@ -28,14 +28,21 @@ with app.app_context():
     db.create_all()
 
 # Configuración de Google Sheets
-SERVICE_ACCOUNT_FILE = 'path/to/your/service-account-file.json'
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+SERVICE_ACCOUNT_FILE = os.path.expanduser("C:/Users/hp/OneDrive/Escritorio/service-account-file.json")
 
-creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-SERVICE = build('sheets', 'v4', credentials=creds)
-SHEET_ID = 'your-google-sheet-id'
-RANGE_NAME = 'Sheet1!A:E'
+# Verificar si el archivo de credenciales existe
+if not os.path.exists(SERVICE_ACCOUNT_FILE):
+    print("Error: El archivo de credenciales no se encontró en la ruta especificada.")
+else:
+    print("El archivo de credenciales se encontró correctamente.")
 
+    SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
+
+    # Crear credenciales desde el archivo de cuenta de servicio
+    creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    SERVICE = build('sheets', 'v4', credentials=creds)
+    SHEET_ID = 'your-google-sheet-id'
+    RANGE_NAME = 'Sheet1!A:E'
 def read_google_sheets():
     sheet = SERVICE.spreadsheets()
     result = sheet.values().get(spreadsheetId=SHEET_ID, range=RANGE_NAME).execute()
