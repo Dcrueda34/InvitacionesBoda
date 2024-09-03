@@ -53,27 +53,15 @@ def read_google_sheets():
 def home():
     return render_template('invitation.html')
 
-@app.route('/thank_you')
-def thank_you():
-    return 'Gracias por confirmar tu asistencia!'
+@app.route('/pildoraAzul')
+def redirectToInvitation():
+    return render_template('pildoraAzul.html')
 
-@app.route('/process_responses')
-def process_responses():
-    values = read_google_sheets()
-    for row in values[1:]:  # Skip header row
-        phone_number, name, adults, children, choice = row
-        existing_confirmation = Confirmation.query.filter_by(phone_number=phone_number).first()
-        if not existing_confirmation:
-            new_confirmation = Confirmation(
-                phone_number=phone_number,
-                name=name,
-                adults=int(adults),
-                children=int(children),
-                choice=choice
-            )
-            db.session.add(new_confirmation)
-            db.session.commit()
-    return redirect(url_for('thank_you'))
+@app.route('/pildoraRoja')
+def redirectToConfirmation():
+    return render_template('pildoraRoja.html')
+  
+
 
 if __name__ == '__main__':
     app.run(debug=True)
