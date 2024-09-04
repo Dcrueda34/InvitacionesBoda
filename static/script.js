@@ -73,8 +73,11 @@ let videoStartTime = 0;
 //cargar audio de fondo
 window.addEventListener('load', function() {
     var backgroundAudio = document.getElementById('background-audio');
-    backgroundAudio.play();
+    backgroundAudio.play().catch(function(error) {
+        console.log('Auto-play was prevented:', error);
+    });
 });
+
 
 // Función para dibujar el video de Jesús
 function drawJesus() {
