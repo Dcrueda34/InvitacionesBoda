@@ -15,7 +15,8 @@
         <div class="pill-container">
             <button id="red-pill" class="pill red-pill" onclick="redirectToConfirmation()">Píldora Roja</button>
             <button id="blue-pill" class="pill blue-pill" onclick="redirectToInvitation()">Píldora Azul</button>
-            <audio id="background-audio" src="/static/audio/Fondo.mp3" preload="auto"></audio>
+            <audio id="background-audio" src="{{ url_for('static', filename='audio/Fondo.mp3') }}" preload="auto"></audio>
+
         </div>
     </div>
    

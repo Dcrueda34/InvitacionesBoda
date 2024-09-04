@@ -76,7 +76,6 @@ window.addEventListener('load', function() {
     backgroundAudio.play();
 });
 
-
 // Función para dibujar el video de Jesús
 function drawJesus() {
     ctx.drawImage(jesusVideo, jesusX, jesusY, videoWidth, videoHeight);
