@@ -24,10 +24,10 @@ body {
 .typing-text {
     white-space: pre-wrap; /* Mantiene los saltos de línea y espacios en el texto */
     overflow-wrap: break-word; /* Rompe el texto largo para que no desborde el contenedor */
-    font-size: 2rem; /* Tamaño de la fuente más grande */
+    font-size: 0.8rem; /* Tamaño de la fuente más grande */
     font-weight: bold; /* Texto en negrita */
-    line-height: 0.8    ; /* Espacio entre líneas */
-    max-width: 95%; /* Ajusta el ancho máximo del contenedor de texto */
+    line-height: 0.8   ; /* Espacio entre líneas */
+    max-width: 80%; /* Ajusta el ancho máximo del contenedor de texto */
     color: white; /* Color del texto */
     margin: 0 auto; /* Centra el contenedor de texto horizontalmente */
     padding: 20px; /* Añade relleno alrededor del texto */
