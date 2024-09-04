@@ -70,6 +70,13 @@ const alainAnimationStartTime = 4; // 10 segundos
 // Tiempo transcurrido desde el inicio del video
 let videoStartTime = 0;
 
+//cargar audio de fondo
+window.addEventListener('load', function() {
+    var backgroundAudio = document.getElementById('background-audio');
+    backgroundAudio.play();
+});
+
+
 // Función para dibujar el video de Jesús
 function drawJesus() {
     ctx.drawImage(jesusVideo, jesusX, jesusY, videoWidth, videoHeight);

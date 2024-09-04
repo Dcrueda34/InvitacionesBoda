@@ -1,14 +1,14 @@
 body {
     background-image: url('/static/images/Fondo.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza el contenido */
     color: white;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Para evitar el desplazamiento si el texto es largo */
+    overflow: hidden;
 }
 
 .container {
@@ -24,13 +24,13 @@ body {
 .typing-text {
     white-space: pre-wrap; /* Mantiene los saltos de línea y espacios en el texto */
     overflow-wrap: break-word; /* Rompe el texto largo para que no desborde el contenedor */
-    font-size: 0.8rem; /* Tamaño de la fuente más grande */
+    font-size: 1rem; /* Tamaño de la fuente más grande */
     font-weight: bold; /* Texto en negrita */
-    line-height: 0.8   ; /* Espacio entre líneas */
+    line-height: 0.8; /* Espacio entre líneas */
     max-width: 90%; /* Ajusta el ancho máximo del contenedor de texto */
     color: orangered; /* Color del texto */
     margin: 0 auto; /* Centra el contenedor de texto horizontalmente */
-    padding: 20px; /* Añade relleno alrededor del texto */
+    padding: 30px; /* Añade relleno alrededor del texto */
     position: relative; /* Necesario para posicionar el cursor */
     display: inline; /* Asegura que el contenedor de texto ajuste su tamaño al contenido */
 }
@@ -56,7 +56,6 @@ body {
     50% { color: #eceeed; }
 }
 
-
 .pill-container {
     margin-top: 20px; /* Espacio arriba del botón */
 }
@@ -77,3 +76,24 @@ body {
     background-color: #055a87; /* Color azul oscuro al pasar el mouse */
 }
 
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        background-attachment: fixed; /* Mantiene la imagen fija en dispositivos móviles */
+    }
+
+    .container {
+        height: auto; /* Permite que el contenedor ajuste su altura automáticamente */
+    }
+
+    .typing-text {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño en dispositivos móviles */
+        padding: 20px; /* Menos relleno para ahorrar espacio */
+        max-width: 100%; /* Asegura que el contenedor de texto no se desborde */
+    }
+
+    .devolver {
+        padding: 8px 16px; /* Ajusta el relleno para pantallas pequeñas */
+        font-size: 0.9rem; /* Ajusta el tamaño de la fuente del botón */
+    }
+}

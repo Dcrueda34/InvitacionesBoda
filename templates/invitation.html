@@ -10,13 +10,16 @@
     <div class="matrix-container">
         <canvas id="matrix-canvas"></canvas>
         <div id="video-container" class="video-container">
-            <button id="playButton" class="pill">Reproducir Video</button>
+            <button id="playButton" class="pill">Play ▶ Aqui </button>
         </div>
         <div class="pill-container">
             <button id="red-pill" class="pill red-pill" onclick="redirectToConfirmation()">Píldora Roja</button>
             <button id="blue-pill" class="pill blue-pill" onclick="redirectToInvitation()">Píldora Azul</button>
+            <audio id="background-audio" src="/static/audio/Fondo.mp3" preload="auto"></audio>
         </div>
     </div>
+   
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
