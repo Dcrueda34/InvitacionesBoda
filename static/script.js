@@ -146,11 +146,11 @@ jesusVideo.addEventListener('play', () => {
             videoStartTime = (Date.now() - startTime) / 1000; // Convertir milisegundos a segundos
 
             // Animación de Diana
-            if (videoStartTime >= dianaAnimationStartTime && dianaX < (jesusX - imageWidth)) {
+            if (videoStartTime >= dianaAnimationStartTime && dianaX < (jesusX - 100)) {
                 // Función para mover la imagen de Diana desde el lado izquierdo hacia el centro
                 function moveDiana() {
                     // Actualizar la posición de la imagen de Diana
-                    if (dianaX < (jesusX - 200)) {
+                    if (dianaX < (jesusX - 150)) {
                         dianaX += 0.05; // Velocidad de movimiento (ajustar según sea necesario)
                         requestAnimationFrame(moveDiana);
                     }
@@ -163,7 +163,7 @@ jesusVideo.addEventListener('play', () => {
                 // Función para mover la imagen de Alain desde el lado derecho hacia el centro
                 function moveAlain() {
                     // Actualizar la posición de la imagen de Alain
-                    if (alainX > (jesusX + 200)) {
+                    if (alainX > (jesusX + 150)) {
                         alainX -= 0.05; // Velocidad de movimiento (ajustar según sea necesario)
                         requestAnimationFrame(moveAlain);
                     }
