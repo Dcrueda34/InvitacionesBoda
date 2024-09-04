@@ -50,12 +50,15 @@ body {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pill {
     display: inline-block;
     padding: 10px 30px;
-    margin: 0 10px;
+    margin: 10px;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -164,4 +167,25 @@ body {
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .matrix-code {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .pill {
+        padding: 10px 20px; /* Ajusta el tamaño de los botones */
+        font-size: 0.9rem;   /* Ajusta el tamaño del texto en los botones */
+    }
+
+    #playButton {
+        padding: 10px 20px;
+        font-size: 1rem;    /* Ajusta el tamaño del botón de reproducción */
+    }
+
+    #jesus {
+        width: 150px;       /* Ajusta el tamaño de la imagen de Jesús */
+    }
 }
